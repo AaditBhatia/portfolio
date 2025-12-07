@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Chess board CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -277,24 +280,22 @@
                     <div class="game-details">
                         <!-- Interactive Chess Board -->
                         <div class="chess-board-container">
-                            <iframe src="https://lichess.org/study/embed/ILMgeRbh/czJm6emT"
-                                    class="chess-board-iframe"
-                                    frameborder="0"
-                                    allowtransparency="true"
-                                    allow="autoplay">
-                            </iframe>
+                            <div id="chessboard" style="width: 100%; max-width: 500px; margin: 0 auto;"></div>
+                            <div class="board-controls">
+                                <button class="control-btn" id="startBtn">⏮ Start</button>
+                                <button class="control-btn" id="prevBtn">◀ Previous</button>
+                                <button class="control-btn" id="nextBtn">Next ▶</button>
+                                <button class="control-btn" id="endBtn">End ⏭</button>
+                            </div>
+                            <div class="move-display">
+                                <span id="moveNumber">Move: Start</span>
+                            </div>
                         </div>
 
                         <div class="game-analysis">
                             <p><strong>Analysis:</strong> A well-fought game in the King's Indian Defense against a Grandmaster.
-                            This game showcased deep strategic understanding in one of chess's most dynamic openings. Use the board above to replay the moves and see the position.</p>
+                            This game showcased deep strategic understanding in one of chess's most dynamic openings. Use the controls above to replay the moves and see the position.</p>
                         </div>
-                    </div>
-
-                    <div class="game-actions">
-                        <a href="https://lichess.org/study/ILMgeRbh/czJm6emT" target="_blank" class="game-link">
-                            View Full Analysis on Lichess →
-                        </a>
                     </div>
                 </article>
             </div>
@@ -408,6 +409,71 @@
             </div>
         </div>
     </footer>
+
+    <!-- Chess libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+
+    <!-- Chess game initialization -->
+    <script>
+        // Initialize chess game
+        const game = new Chess();
+        const board = Chessboard('chessboard', {
+            position: 'start',
+            draggable: false,
+            pieceTheme: 'https://chessboardjs.com/img/chesspieces/wikipedia/{piece}.png'
+        });
+
+        // Game PGN
+        const pgn = `1. d4 Nf6 2. c4 g6 3. Nf3 Bg7 4. Nc3 O-O 5. g3 d6 6. Bg2 Nbd7 7. O-O e5 8. Qc2 Re8 9. Rd1 c6 10. e4 Qc7 11. h3 a6 12. c5 dxc5 13. dxe5 Nxe5 14. Nxe5 Qxe5 15. Bf4 Qe6 16. Na4 Nd7 17. Rd6 Qe7 18. Rad1`;
+
+        game.load_pgn(pgn);
+        const moves = game.history({ verbose: true });
+        game.reset();
+
+        let currentMove = -1;
+
+        function updateBoard() {
+            board.position(game.fen());
+            const moveText = currentMove === -1 ? 'Start' :
+                            `Move ${Math.floor(currentMove / 2) + 1}${currentMove % 2 === 0 ? 'w' : 'b'}: ${moves[currentMove].san}`;
+            document.getElementById('moveNumber').textContent = moveText;
+        }
+
+        document.getElementById('startBtn').addEventListener('click', () => {
+            game.reset();
+            currentMove = -1;
+            updateBoard();
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentMove >= 0) {
+                game.undo();
+                currentMove--;
+                updateBoard();
+            }
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (currentMove < moves.length - 1) {
+                currentMove++;
+                game.move(moves[currentMove]);
+                updateBoard();
+            }
+        });
+
+        document.getElementById('endBtn').addEventListener('click', () => {
+            while (currentMove < moves.length - 1) {
+                currentMove++;
+                game.move(moves[currentMove]);
+            }
+            updateBoard();
+        });
+
+        // Initialize board
+        updateBoard();
+    </script>
 
     <script src="script.js"></script>
 </body>
