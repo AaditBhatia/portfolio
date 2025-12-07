@@ -385,6 +385,21 @@ body {
     box-shadow: var(--shadow-xl);
 }
 
+.profile-photo {
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: var(--shadow-xl);
+    transition: var(--transition);
+    filter: brightness(1.05) contrast(1.1);
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 35px -5px rgba(0, 0, 0, 0.15);
+}
+
 /* ===================================
    Skills Section
    =================================== */
@@ -658,6 +673,17 @@ body {
     color: var(--text-secondary);
     margin: 0;
     font-size: 1rem;
+}
+
+.contact-method a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-method a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
 }
 
 .contact-form {
