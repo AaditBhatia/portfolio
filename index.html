@@ -1,376 +1,552 @@
-
 <!DOCTYPE html>
-<html>
-   <head>
-      <title>Aadit Bhatia | Software Engineer & Chess Master</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1/">
-      <link rel="stylesheet" type="text/css" href="default.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
-   </head>
-   <body>
-      <section class="NavSection" id="navbar">
-         <div class="navbar flex">
-            <div class="nav-container flex">
-               <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#experience">Experience</a></li>
-                  <li><a href="#projects">Projects</a></li>
-                  <li><a href="#chess">Chess</a></li>
-                  <li><a href="#contact">Connect</a></li>
-               </ul>
-            </div>
-         </div>
-      </section>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aadit Bhatia - Software Engineer Portfolio">
+    <meta name="author" content="Aadit Bhatia">
+    <title>Aadit Bhatia | Software Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-      <section class="justAboveHome">
-         <div class="up">
-            <h1 class="animate__animated animate__fadeInTopRight" style="text-align: center;">
-               Software Engineer. Problem Solver. Chess Master.
-            </h1>
-         </div>
-      </section>
-
-      <section class="Home">
-         <div class="my-wrapper">
-            <div class="left-column1">
-               <h1 style="text-align:center; color: #eaeaea; font-size:80px;" class="animate__animated animate__fadeInTopRight">
-                  Aadit Bhatia
-               </h1>
-               <p style="text-align:center; color: #333; font-size:28px; margin-top: -20px;">
-                  Building scalable systems at AWS
-               </p>
+    <!-- Chess board CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="#home">Aadit Bhatia</a>
             </div>
-            <div class="right-column1">
-               <div class='frame'>
-                  <canvas id='tree'></canvas>
-               </div>
-            </div>
-         </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#chess" class="nav-link">Chess</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-         <div class="intro-wrapper" id="about">
-            <div class="left-column">
-               <img id="myProfile" src="images/chesspic1.jpg" alt="Aadit Bhatia">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Hi, I'm <span class="highlight">Aadit Bhatia</span></h1>
+                <h2 class="hero-subtitle">Software Development Engineer @ AWS</h2>
+                <p class="hero-description">
+                    Building scalable distributed systems and ML-powered solutions at Amazon Web Services.
+                    Passionate about performance optimization, full-stack development, and solving complex problems at scale.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
             </div>
-            <div class="right-column">
-               <div id="preview">
-                  <h1>About Me</h1>
-                  <p style="font-size:22px; line-height: 1.6;">
-                     Software Development Engineer at Amazon Web Services, where I build distributed systems serving millions of requests.
-                     I specialize in performance optimization, ML-powered automation, and large-scale infrastructure.
-                  </p>
-                  <p style="font-size:22px; line-height: 1.6;">
-                     Beyond code, I'm a Chess National Master who has represented India internationally.
-                     I bring the same strategic thinking from chess to solving complex engineering challenges.
-                  </p>
-                  <p style="font-size:22px; line-height: 1.6;">
-                     Computer Science graduate from UMass Amherst with experience in AI/ML, distributed systems,
-                     and full-stack development. Passionate about building technology that scales.
-                  </p>
-                  <div style="margin-top: 20px;">
-                     <a style="color:aqua; padding:10px; font-size:18px;" href="Aadit Bhatia Resume.docx">
-                        <i class="fas fa-download"></i> Resume
-                     </a>
-                     <a style="color:aqua; padding:10px; font-size:18px;" href="https://www.linkedin.com/in/aaditbhatia/" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                     </a>
-                     <a style="color:aqua; padding:10px; font-size:18px;" href="https://github.com/AaditBhatia/" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
-                     </a>
-                  </div>
-               </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a Software Development Engineer at Amazon Web Services in Sunnyvale, CA, where I build
+                        distributed systems serving millions of requests. I specialize in full-stack development,
+                        machine learning, and performance optimization of large-scale infrastructure.
+                    </p>
+                    <p>
+                        I graduated from the University of Massachusetts Amherst with a B.S. in Computer Science
+                        (Physics Minor, 3.7 GPA). My experience spans from developing ML-powered automation agents
+                        that reduce operational toil by 20%, to building distributed load testing frameworks and
+                        optimizing caching layers for 50% latency reduction.
+                    </p>
+                    <p>
+                        I'm passionate about solving complex technical challenges, from AI-powered applications to
+                        distributed systems architecture. Whether it's building full-stack features for API Gateway
+                        or creating intelligent automation tools, I thrive on turning ambitious ideas into production reality.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h3>2+</h3>
+                            <p>Years at AWS</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>10+</h3>
+                            <p>Technologies</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>3.7</h3>
+                            <p>GPA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/profile.jpg" alt="Aadit Bhatia" class="profile-photo">
+                </div>
             </div>
-         </div>
-      </section>
+        </div>
+    </section>
 
-      <section class="Experience" id="experience">
-         <div class="main-container">
-            <h1 style="text-align: center;">Professional Experience</h1>
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages & Full-Stack</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">C/C++</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>AI/ML & Infrastructure</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">AWS Lambda</span>
+                        <span class="skill-tag">API Gateway</span>
+                        <span class="skill-tag">EC2</span>
+                        <span class="skill-tag">S3</span>
+                        <span class="skill-tag">DynamoDB</span>
+                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Specializations</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Distributed Systems</span>
+                        <span class="skill-tag">Performance Optimization</span>
+                        <span class="skill-tag">Debugging</span>
+                        <span class="skill-tag">Large-scale Systems</span>
+                        <span class="skill-tag">NLP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="exp-wrapper">
-               <div class="full-width-exp">
-                  <div class="exp-card">
-                     <div class="exp-header">
-                        <h2><i class="fab fa-aws"></i> Amazon Web Services</h2>
-                        <h3>Software Development Engineer | July 2024 - Present</h3>
-                        <p class="location">Sunnyvale, CA</p>
-                     </div>
-                     <div class="exp-content">
-                        <h4>API Gateway & Load Balancing</h4>
-                        <p>
-                           Working on critical infrastructure that powers millions of applications worldwide. API Gateway acts as the
-                           front door for applications to access backend services, handling request routing, authentication, and traffic
-                           management at massive scale.
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">Stock Agent</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Strands Stock Agent on AWS Fargate</h3>
+                        <p>Production-ready AI stock analysis API combining FastAPI, Strands agents, and AWS infrastructure. Fetches real-time stock data from Yahoo Finance and analyzes stocks with market sentiment comparison.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                            <span>AWS Fargate</span>
+                            <span>Docker</span>
+                            <span>CDK</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AaditBhatia/strands-stock-agent" target="_blank" class="project-link">View on GitHub →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">E-Commerce</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI E-Commerce Generator</h3>
+                        <p>Y Combinator Hackathon project - Full-stack AI agent generating custom e-commerce websites from natural language prompts. Engineered prompt engineering pipeline and quality evaluation system achieving end-to-end automation.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>TypeScript</span>
+                            <span>React</span>
+                            <span>Claude API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AaditBhatia" target="_blank" class="project-link">View on GitHub →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">Audio ML</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Predictive Audio Analytics Engine</h3>
+                        <p>End-to-end ML pipeline processing 160K+ tracks with data analysis tools, feature engineering, and visualization. Achieved 85% accuracy through systematic experiments and hyperparameter optimization.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>PyTorch</span>
+                            <span>scikit-learn</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AaditBhatia" target="_blank" class="project-link">View on GitHub →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">GPU Training</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Distributed Training Optimizer</h3>
+                        <p>Built distributed ML training system across 8 GPUs reducing training time by 35%. Profiled large-scale system performance and optimized memory patterns enabling 2.5x larger batch sizes.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>PyTorch</span>
+                            <span>CUDA</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AaditBhatia" target="_blank" class="project-link">View on GitHub →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chess Section -->
+    <section id="chess" class="section chess">
+        <div class="container">
+            <h2 class="section-title">♟️ Chess</h2>
+            <div class="chess-intro">
+                <p>
+                    Beyond software engineering, I'm a competitive chess player with tournament experience
+                    against titled players including Grandmasters and FIDE Masters.
+                </p>
+                <div class="chess-profiles">
+                    <a href="https://www.chess.com/member/real_taiatai" target="_blank" class="chess-profile-link">
+                        <span class="chess-icon">♔</span>
+                        <span>Chess.com Profile</span>
+                    </a>
+                    <a href="https://players.chessbase.com/en/player/Aadit_Bhatia/336221" target="_blank" class="chess-profile-link">
+                        <span class="chess-icon">♕</span>
+                        <span>ChessBase Profile</span>
+                    </a>
+                </div>
+            </div>
+
+            <h3 class="chess-games-title">Notable Games</h3>
+
+            <!-- Game Selector -->
+            <div class="game-selector">
+                <button class="game-tab active" data-game="0">vs Vian Yang (2025)</button>
+                <button class="game-tab" data-game="1">vs IM Eric Rosen (2024)</button>
+                <button class="game-tab" data-game="2">vs IM Andy Woodward (2024)</button>
+            </div>
+
+            <div class="chess-games-grid">
+                <article class="chess-game-card">
+                    <!-- Game Header - will be updated dynamically -->
+                    <div class="game-header" id="gameHeader">
+                        <div class="game-title">
+                            <h4 id="gameTitle">2025 Golden State Open</h4>
+                            <p class="game-players" id="gamePlayers">
+                                <span class="player-white">⚪ Vian Yang</span>
+                                <span class="vs">vs</span>
+                                <span class="player-black">⚫ Aadit Bhatia</span>
+                            </p>
+                        </div>
+                        <div class="game-meta">
+                            <span class="game-date" id="gameDate">📅 January 19, 2025</span>
+                            <span class="game-opening" id="gameOpening">King's Indian Defense: Fianchetto Variation</span>
+                            <span class="game-result" id="gameResult">Result: Draw by repetition</span>
+                        </div>
+                    </div>
+
+                    <div class="game-details">
+                        <!-- Interactive Chess Board -->
+                        <div class="chess-board-container">
+                            <div id="chessboard" style="width: 100%; max-width: 500px; margin: 0 auto;"></div>
+                            <div class="board-controls">
+                                <button class="control-btn" id="startBtn">⏮ Start</button>
+                                <button class="control-btn" id="prevBtn">◀ Previous</button>
+                                <button class="control-btn" id="nextBtn">Next ▶</button>
+                                <button class="control-btn" id="endBtn">End ⏭</button>
+                            </div>
+                            <div class="move-display">
+                                <span id="moveNumber">Move: Start</span>
+                            </div>
+                        </div>
+
+                        <div class="game-analysis">
+                            <p id="gameAnalysis"><strong>Analysis:</strong> A tactical masterpiece in the King's Indian Defense. Despite being in a tough position, I found creative resources leading to a dramatic draw by repetition. The game featured complex tactical sequences and demonstrated fighting spirit in a difficult position.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title">Experience & Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Software Development Engineer</h3>
+                        <p class="timeline-subtitle">Amazon Web Services | Sunnyvale, CA | July 2024 - Present</p>
+                        <p class="timeline-description">
+                            • Built ML-powered oncall automation agent using Python—developed intelligent classification system reducing operational toil by 20% through NLP
+                            <br>• Developed full-stack Response Streaming feature for API Gateway serving millions of requests—designed control plane APIs and orchestrated data flow across distributed compute nodes
+                            <br>• Analyzed and optimized performance of distributed caching layer—debugged bottlenecks achieving 50% latency reduction
+                            <br>• Conducted code reviews across team ensuring best practices for performance, testability, and efficiency
                         </p>
-                        <ul class="achievement-list">
-                           <li>
-                              <strong>ML-Powered Automation:</strong> Built intelligent oncall automation agent using Python and NLP,
-                              reducing operational toil by 20% through automated incident classification and routing
-                           </li>
-                           <li>
-                              <strong>Response Streaming:</strong> Developed full-stack feature for API Gateway serving millions of requests—
-                              designed control plane APIs and orchestrated data flow across distributed compute nodes
-                           </li>
-                           <li>
-                              <strong>Performance Optimization:</strong> Analyzed and optimized distributed caching layer, achieving 50%
-                              latency reduction through systematic profiling of large-scale systems
-                           </li>
-                           <li>
-                              <strong>Technical Leadership:</strong> Conducted code reviews ensuring best practices for performance,
-                              testability, and efficiency across distributed systems architecture
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-
-                  <div class="exp-card">
-                     <div class="exp-header">
-                        <h2><i class="fab fa-aws"></i> Amazon Web Services - Intern</h2>
-                        <h3>Software Development Engineer Intern | June 2023 - September 2023</h3>
-                        <p class="location">Sunnyvale, CA</p>
-                     </div>
-                     <div class="exp-content">
-                        <ul class="achievement-list">
-                           <li>
-                              Built distributed load testing framework for production system handling billions of requests—
-                              developed debugging tools and performance analysis capabilities
-                           </li>
-                           <li>
-                              Integrated automated test suite into CI/CD pipeline with real-time metrics, visualization tools,
-                              and monitoring for continuous performance regression detection
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-
-                  <div class="exp-card">
-                     <div class="exp-header">
-                        <h2><i class="fas fa-database"></i> Oracle</h2>
-                        <h3>Systems Analyst | May 2022 - September 2022</h3>
-                        <p class="location">Denver, CO</p>
-                     </div>
-                     <div class="exp-content">
-                        <ul class="achievement-list">
-                           <li>
-                              Built Python-based data processing pipeline automating integration of 100+ workbooks—
-                              performed data analysis and visualization for large-scale systems optimization
-                           </li>
-                           <li>
-                              Developed workflow automation tools using Python and SQL, reducing manual errors and
-                              improving system efficiency across M&A data operations
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="skills-showcase">
-               <h2 style="text-align: center; margin-top: 40px;">Technical Skills</h2>
-               <div class="skills-grid">
-                  <div class="skill-category">
-                     <h3>Languages & Full-Stack</h3>
-                     <p>Python, JavaScript, TypeScript, C/C++, Java, SQL</p>
-                     <p>React, Node.js, Next.js, Express, HTML/CSS</p>
-                  </div>
-                  <div class="skill-category">
-                     <h3>AI/ML & Infrastructure</h3>
-                     <p>PyTorch, TensorFlow, scikit-learn</p>
-                     <p>AWS (Lambda, API Gateway, EC2, S3, DynamoDB)</p>
-                     <p>Large-scale distributed systems, Performance optimization</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-
-      <section class="Projects" id="projects">
-         <div class="main-container">
-            <h1 style="text-align: center;">Featured Projects</h1>
-            <p style="text-align: center; font-size: 20px; margin-bottom: 30px;">
-               <a href="https://github.com/AaditBhatia/" target="_blank" style="color: #333;">
-                  <i class="fab fa-github"></i> View all projects on GitHub
-               </a>
-            </p>
-
-            <div class="post-wrapper">
-               <div>
-                  <div class="post">
-                     <div class="post-icon">
-                        <i class="fas fa-robot fa-5x"></i>
-                     </div>
-                     <div class="post-preview">
-                        <h4 class="post-title">AI E-Commerce Generator</h4>
-                        <p class="post-badge">Y Combinator Hackathon</p>
-                        <p class="post-intro">
-                           Built full-stack AI agent generating custom e-commerce websites from natural language prompts.
-                           Developed Python backend integrating LLM API for code generation and repository modification.
-                           Engineered prompt engineering pipeline achieving end-to-end automation in 24 hours.
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Software Development Engineer Intern</h3>
+                        <p class="timeline-subtitle">Amazon Web Services | Sunnyvale, CA | June 2023 - Sept 2023</p>
+                        <p class="timeline-description">
+                            • Built distributed load testing framework for production system handling billions of requests—developed debugging tools and performance analysis capabilities for large-scale distributed computing
+                            <br>• Integrated automated test suite into CI/CD pipeline with real-time metrics, visualization tools, and monitoring—enabled continuous performance regression detection
                         </p>
-                        <p class="tech-stack">Python • TypeScript • React • Claude API</p>
-                     </div>
-                  </div>
-               </div>
-
-               <div>
-                  <div class="post">
-                     <div class="post-icon">
-                        <i class="fas fa-music fa-5x"></i>
-                     </div>
-                     <div class="post-preview">
-                        <h4 class="post-title">Predictive Audio Analytics Engine</h4>
-                        <p class="post-intro">
-                           Built end-to-end ML pipeline processing 160K+ tracks. Developed data analysis tools, feature
-                           engineering pipeline, and visualization for model performance evaluation. Achieved 85% accuracy
-                           through iterative model evaluation and hyperparameter optimization.
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>University of Massachusetts Amherst</h3>
+                        <p class="timeline-subtitle">B.S. Computer Science, Physics Minor | GPA: 3.7 | Graduated Dec 2023</p>
+                        <p class="timeline-description">
+                            Relevant Coursework: Machine Learning, Distributed Systems, Algorithms & Data Structures, Computer Systems (C), Search Engines, Natural Language Processing
                         </p>
-                        <p class="tech-stack">Python • PyTorch • scikit-learn</p>
-                     </div>
-                  </div>
-               </div>
-
-               <div>
-                  <div class="post">
-                     <div class="post-icon">
-                        <i class="fas fa-server fa-5x"></i>
-                     </div>
-                     <div class="post-preview">
-                        <h4 class="post-title">Distributed Training Optimizer</h4>
-                        <p class="post-intro">
-                           Built distributed ML training system across 8 GPUs, reducing training time by 35%.
-                           Profiled large-scale system performance using visualization tools—optimized memory patterns
-                           and implemented mixed-precision training enabling 2.5x larger batch sizes.
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Systems Analyst</h3>
+                        <p class="timeline-subtitle">Oracle | Denver, CO | May 2022 - Sept 2022</p>
+                        <p class="timeline-description">
+                            • Built Python-based data processing pipeline automating integration of 100+ workbooks—performed data analysis and visualization for large-scale systems optimization
+                            <br>• Developed workflow automation tools using Python and SQL, reducing manual errors and improving system efficiency across M&A data operations
                         </p>
-                        <p class="tech-stack">Python • PyTorch • CUDA</p>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </section>
+        </div>
+    </section>
 
-      <section class="Chess" id="chess">
-         <div class="main-container">
-            <h1 style="text-align: center;">
-               <i class="fas fa-chess"></i> Chess Achievements
-            </h1>
-
-            <div class="chess-wrapper">
-               <div class="chess-intro">
-                  <div class="chess-title-section">
-                     <h2>FIDE National Master</h2>
-                     <p style="font-size: 24px; color: #666; margin-top: 10px;">
-                        Represented India in International Tournaments
-                     </p>
-                  </div>
-                  <img src="images/chesspic1.jpg" alt="Chess" class="chess-image">
-               </div>
-
-               <div class="chess-stats">
-                  <div class="chess-card">
-                     <div class="chess-icon">
-                        <i class="fas fa-trophy fa-3x"></i>
-                     </div>
-                     <h3>FIDE Rating</h3>
-                     <p>Official International Rating</p>
-                     <a href="https://ratings.fide.com/profile/25088955" target="_blank" class="chess-link">
-                        View FIDE Profile →
-                     </a>
-                  </div>
-
-                  <div class="chess-card">
-                     <div class="chess-icon">
-                        <i class="fas fa-globe fa-3x"></i>
-                     </div>
-                     <h3>Chess.com</h3>
-                     <p>Online Chess Profile</p>
-                     <a href="https://www.chess.com/member/real_taiatai" target="_blank" class="chess-link">
-                        View Chess.com Profile →
-                     </a>
-                  </div>
-
-                  <div class="chess-card">
-                     <div class="chess-icon">
-                        <i class="fas fa-database fa-3x"></i>
-                     </div>
-                     <h3>ChessBase</h3>
-                     <p>Game Database & Analysis</p>
-                     <a href="https://players.chessbase.com/en/player/Aadit_Bhatia/336221" target="_blank" class="chess-link">
-                        View ChessBase Profile →
-                     </a>
-                  </div>
-               </div>
-
-               <div class="chess-description">
-                  <p style="font-size: 20px; line-height: 1.8; text-align: center; max-width: 900px; margin: 0 auto;">
-                     Chess has taught me strategic thinking, pattern recognition, and the ability to evaluate complex positions
-                     under pressure. These skills translate directly to software engineering—debugging distributed systems,
-                     optimizing performance bottlenecks, and architecting scalable solutions all require the same analytical
-                     mindset that chess develops.
-                  </p>
-               </div>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>
+                        I'm always open to discussing new projects, creative ideas,
+                        or opportunities to collaborate on innovative solutions.
+                    </p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <h4>Email</h4>
+                            <p><a href="mailto:aadit.bhatia93@gmail.com">aadit.bhatia93@gmail.com</a></p>
+                        </div>
+                        <div class="contact-method">
+                            <h4>LinkedIn</h4>
+                            <p><a href="https://www.linkedin.com/in/aaditbhatia/" target="_blank">linkedin.com/in/aaditbhatia</a></p>
+                        </div>
+                        <div class="contact-method">
+                            <h4>GitHub</h4>
+                            <p><a href="https://github.com/AaditBhatia" target="_blank">github.com/AaditBhatia</a></p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
             </div>
-         </div>
-      </section>
+        </div>
+    </section>
 
-      <section class="Contact" id="contact">
-         <div class="main-container">
-            <h1 style="text-align: center;">Let's Connect</h1>
-            <p style="text-align: center; font-size: 22px; margin-bottom: 30px; color: #333;">
-               Interested in collaborating, discussing technology, or perhaps a game of chess? Reach out!
-            </p>
-
-            <div class="contact-options">
-               <div class="contact-card">
-                  <i class="fas fa-envelope fa-3x"></i>
-                  <h3>Email</h3>
-                  <p>Send me a message below</p>
-               </div>
-               <div class="contact-card">
-                  <i class="fab fa-linkedin fa-3x"></i>
-                  <h3>LinkedIn</h3>
-                  <a href="https://www.linkedin.com/in/aaditbhatia/" target="_blank">Connect with me</a>
-               </div>
-               <div class="contact-card">
-                  <i class="fab fa-github fa-3x"></i>
-                  <h3>GitHub</h3>
-                  <a href="https://github.com/AaditBhatia/" target="_blank">Check out my code</a>
-               </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Aadit Bhatia. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/AaditBhatia" target="_blank" aria-label="GitHub">GitHub</a>
+                <a href="https://www.linkedin.com/in/aaditbhatia/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+                <a href="mailto:aadit.bhatia93@gmail.com" aria-label="Email">Email</a>
             </div>
+        </div>
+    </footer>
 
-            <form id="contact-form">
-               <label>Name</label>
-               <input class="input-field" type="text" name="name" required>
+    <!-- Chess libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
 
-               <label>Email</label>
-               <input class="input-field" type="email" name="email" required>
+    <!-- Chess game initialization -->
+    <script>
+        // Game data
+        const games = [
+            {
+                title: "2025 Golden State Open",
+                white: "Vian Yang",
+                black: "Aadit Bhatia",
+                date: "January 19, 2025",
+                opening: "King's Indian Defense: Fianchetto Variation",
+                result: "Draw by repetition",
+                pgn: "1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. Nf3 O-O 5. g3 d6 6. Bg2 Nbd7 7. O-O c6 8. e4 e5 9. h3 Re8 10. Be3 Qa5 11. Qc2 a6 12. Rad1 b5 13. c5 b4 14. Nb1 d5 15. Nxe5 Nxe5 16. dxe5 Nxe4 17. Bxe4 dxe4 18. Qxe4 Bxh3 19. Rfe1 Bxe5 20. Qxc6 Bxb2 21. Bh6 Rec8 22. Qf3 Bf5 23. g4 Bxb1 24. Re7 Bxa2 25. Rdd7 Qa3 26. Be3 Rf8 27. c6 Bg7 28. c7 Qc3 29. Qxa8 b3 30. Re8 b2 31. Rxf8+ Bxf8 32. c8=Q b1=Q+ 33. Kh2 Qe5+ 34. f4 Qg7 35. g5 Be6 36. Qcb7 Qf5 37. Bd4 Qxf4+ 38. Kg1 Qxg5+ 39. Qg2 Qc1+ 40. Qf1 Qg5+ 41. Qfg2 Q7h6 42. Rd8 Qc1+ 43. Qf1 Qhg5+ 44. Kh2 Qh4+ 45. Kg1 Qcg5+",
+                analysis: "A tactical masterpiece in the King's Indian Defense. Despite being in a tough position, I found creative resources leading to a dramatic draw by repetition. The game featured complex tactical sequences and demonstrated fighting spirit in a difficult position."
+            },
+            {
+                title: "Online Chess Tournament",
+                white: "Aadit Bhatia",
+                black: "IM Eric Rosen",
+                date: "October 8, 2024",
+                opening: "Sicilian Defense: Taimanov Variation",
+                result: "1-0 (White wins)",
+                pgn: "1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 Qc7 6. Be2 a6 7. Nxc6 bxc6 8. Qd3 Nf6 9. Qg3 Qxg3 10. hxg3 d5 11. Bg5 Bb4 12. Bxf6 gxf6 13. Bf3 Rb8 14. O-O-O a5 15. Rh6 Ke7 16. Rdh1 Bc5 17. Nd1 a4 18. a3 Bd7 19. Rxh7 Rxh7 20. Rxh7 d4 21. Be2 Rg8 22. g4 Bd6 23. g3 c5 24. f4 Bc6 25. Nf2 Bc7 26. Bc4 Rb8 27. f5 Bxg3 28. Nd3 Bd6 29. Bxe6 Be8 30. Bc4 Rb7 31. g5 fxg5 32. e5 Bb8 33. f6+ Kd8 34. Nxc5 Rc7 35. e6 Rxc5 36. e7+ Kd7 37. Bxf7 Bf4+ 38. Kb1 Bxf7 39. Rxf7 Re5 40. Rf8 Re1+ 41. Ka2 Bd6 42. Rd8+ Kc7 43. e8=Q Rxe8 44. Rxe8 Kd7 45. f7 d3 46. cxd3 Kc6 47. f8=Q Bxf8 48. Rxf8 Kd5 49. Rg8 Kd4 50. Rxg5 Kxd3 51. Rb5 Kc4 52. Rb4+ Kc5 53. Rxa4 Kb5 54. Rb4+ Ka6 55. Kb3 Ka5 56. Kc4 Ka6 57. Kc5 Ka5 58. Kc6 Ka6 1-0",
+                analysis: "A stunning victory against IM Eric Rosen, a renowned chess streamer and International Master (2400+ FIDE). Eric is famous for his entertaining YouTube content and the \"Oh no my queen!\" meme. This game demonstrated precise endgame technique, converting a slight advantage into a winning queen endgame and then a rook endgame."
+            },
+            {
+                title: "Online Chess Tournament",
+                white: "IM Andy Woodward",
+                black: "Aadit Bhatia",
+                date: "December 17, 2024",
+                opening: "London System",
+                result: "0-1 (Black wins)",
+                pgn: "1. d4 Nf6 2. Nf3 d5 3. Bf4 g6 4. Nbd2 Nh5 5. Bg5 f6 6. Bh4 g5 7. Bg3 Bg7 8. e3 Nxg3 9. hxg3 c6 10. Bd3 Bg4 11. c3 Nd7 12. Qc2 h5 13. Bg6+ Kf8 14. Nh2 Be6 15. Nhf3 Bg4 16. Bf5 e6 17. Bxg4 hxg4 18. Rxh8+ Bxh8 19. Qh7 Bg7 20. Nh2 f5 21. O-O-O Qe8 22. Nhf1 Nf6 23. Qh1 c5 24. f3 Qa4 25. a3 b5 26. dxc5 b4 27. axb4 a5 28. Nb1 axb4 29. Rd4 Rb8 30. Nfd2 Nd7 31. fxg4 Nxc5 32. Qf1 Bxd4 33. exd4 bxc3 34. bxc3 Nb3+ 35. Nxb3 Qxb3 36. Nd2 Qxc3+ 37. Kd1 Qxd4 38. Qa6 Rb1+ 39. Ke2 Qxg4+ 40. Kf2 Qd4+ 41. Ke2 Qe5+ 42. Kd3 Rb8 43. Qa7 Qxg3+ 44. Nf3 g4 45. Qc5+ Kf7 46. Qa7+ Kf6 47. Qa1+ Kg6 48. Qa6 Re8 49. Qc6 Re7 50. Qc8 Kf7 51. Qh8 gxf3 52. Qh7+ Ke8 53. Qh3 Qxh3 54. gxh3 e5 0-1",
+                analysis: "An impressive victory against IM Andy Woodward, a strong International Master rated 2500+ FIDE. Andy is a regular competitor in elite tournaments and known for his solid positional play. This game showcased dynamic counterplay in the London System, where I sacrificed material for a devastating attack, ultimately winning in a complex endgame."
+            }
+        ];
 
-               <label>Subject</label>
-               <input class="input-field" type="text" name="subject" required>
+        // Initialize chess game
+        let currentGameIndex = 0;
+        let currentMove = -1;
+        let game = new Chess();
+        let moves = [];
 
-               <label>Message</label>
-               <textarea class="input-field" name="message" rows="5" required></textarea>
+        const board = Chessboard('chessboard', {
+            position: 'start',
+            draggable: false,
+            pieceTheme: 'https://chessboardjs.com/img/chesspieces/wikipedia/{piece}.png'
+        });
 
-               <input id="submit-btn" type="submit" value="Send Message">
-            </form>
-         </div>
-      </section>
+        function loadGame(index) {
+            currentGameIndex = index;
+            currentMove = -1;
 
-      <footer style="background-color: black; color: white; text-align: center; padding: 30px; font-size: 16px;">
-         <p>© 2024 Aadit Bhatia | Software Engineer & Chess Master</p>
-         <p style="margin-top: 10px;">
-            <a href="https://www.linkedin.com/in/aaditbhatia/" target="_blank" style="color: white; margin: 0 10px;">
-               <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/AaditBhatia/" target="_blank" style="color: white; margin: 0 10px;">
-               <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.chess.com/member/real_taiatai" target="_blank" style="color: white; margin: 0 10px;">
-               <i class="fas fa-chess"></i>
-            </a>
-         </p>
-      </footer>
-   </body>
-   <script src="logic.js"></script>
+            // Load PGN
+            game = new Chess();
+            game.load_pgn(games[index].pgn);
+            moves = game.history({ verbose: true });
+            game.reset();
+
+            // Update UI
+            document.getElementById('gameTitle').textContent = games[index].title;
+            document.getElementById('gamePlayers').innerHTML = `
+                <span class="player-white">⚪ ${games[index].white}</span>
+                <span class="vs">vs</span>
+                <span class="player-black">⚫ ${games[index].black}</span>
+            `;
+            document.getElementById('gameDate').textContent = `📅 ${games[index].date}`;
+            document.getElementById('gameOpening').textContent = games[index].opening;
+            document.getElementById('gameResult').textContent = `Result: ${games[index].result}`;
+            document.getElementById('gameAnalysis').innerHTML = `<strong>Analysis:</strong> ${games[index].analysis}`;
+
+            // Update active tab
+            document.querySelectorAll('.game-tab').forEach((tab, i) => {
+                tab.classList.toggle('active', i === index);
+            });
+
+            updateBoard();
+        }
+
+        function updateBoard() {
+            board.position(game.fen());
+            const moveText = currentMove === -1 ? 'Start' :
+                            `Move ${Math.floor(currentMove / 2) + 1}${currentMove % 2 === 0 ? 'w' : 'b'}: ${moves[currentMove].san}`;
+            document.getElementById('moveNumber').textContent = moveText;
+        }
+
+        // Game tab switching
+        document.querySelectorAll('.game-tab').forEach((tab, index) => {
+            tab.addEventListener('click', () => loadGame(index));
+        });
+
+        // Board controls
+        document.getElementById('startBtn').addEventListener('click', () => {
+            game.reset();
+            currentMove = -1;
+            updateBoard();
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentMove >= 0) {
+                game.undo();
+                currentMove--;
+                updateBoard();
+            }
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (currentMove < moves.length - 1) {
+                currentMove++;
+                game.move(moves[currentMove]);
+                updateBoard();
+            }
+        });
+
+        document.getElementById('endBtn').addEventListener('click', () => {
+            while (currentMove < moves.length - 1) {
+                currentMove++;
+                game.move(moves[currentMove]);
+            }
+            updateBoard();
+        });
+
+        // Initialize first game
+        loadGame(0);
+    </script>
+
+    <script src="script.js"></script>
+</body>
 </html>
