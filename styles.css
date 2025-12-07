@@ -674,6 +674,35 @@ body {
     padding: 2rem;
 }
 
+.chess-board-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    background: white;
+}
+
+.chess-board-iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .chess-board-iframe {
+        height: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chess-board-iframe {
+        height: 450px;
+    }
+}
+
 .game-moves {
     background: var(--bg-secondary);
     padding: 1.5rem;
