@@ -544,6 +544,191 @@ body {
 }
 
 /* ===================================
+   Chess Section
+   =================================== */
+.chess {
+    background: var(--bg-secondary);
+}
+
+.chess-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.chess-intro p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.chess-profiles {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.chess-profile-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: white;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 600;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.chess-profile-link:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+.chess-icon {
+    font-size: 2rem;
+}
+
+.chess-games-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+}
+
+.chess-games-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.chess-game-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.chess-game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.game-header {
+    background: linear-gradient(135deg, #8b7355, #6b5344);
+    color: white;
+    padding: 2rem;
+}
+
+.game-title h4 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.game-players {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.player-white,
+.player-black {
+    font-weight: 600;
+}
+
+.vs {
+    opacity: 0.8;
+    font-weight: 400;
+}
+
+.game-meta {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+    opacity: 0.95;
+}
+
+.game-date,
+.game-opening {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.game-details {
+    padding: 2rem;
+}
+
+.game-moves {
+    background: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.moves-text {
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    line-height: 2;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.moves-text strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.game-analysis {
+    padding: 1rem;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(139, 92, 246, 0.05));
+    border-radius: var(--border-radius);
+}
+
+.game-analysis p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.game-actions {
+    padding: 0 2rem 2rem;
+}
+
+.game-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.875rem 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.game-link:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ===================================
    Experience Section
    =================================== */
 .timeline {
