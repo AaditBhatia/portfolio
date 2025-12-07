@@ -259,21 +259,29 @@
 
             <h3 class="chess-games-title">Notable Games</h3>
 
+            <!-- Game Selector -->
+            <div class="game-selector">
+                <button class="game-tab active" data-game="0">vs Vian Yang (2025)</button>
+                <button class="game-tab" data-game="1">vs IM Eric Rosen (2024)</button>
+                <button class="game-tab" data-game="2">vs IM Andy Woodward (2024)</button>
+            </div>
+
             <div class="chess-games-grid">
-                <!-- Game vs GM Cristhian Cruz -->
                 <article class="chess-game-card">
-                    <div class="game-header">
+                    <!-- Game Header - will be updated dynamically -->
+                    <div class="game-header" id="gameHeader">
                         <div class="game-title">
-                            <h4>National Open Vegas 2024</h4>
-                            <p class="game-players">
-                                <span class="player-white">⚪ GM Cristhian Cruz</span>
+                            <h4 id="gameTitle">2025 Golden State Open</h4>
+                            <p class="game-players" id="gamePlayers">
+                                <span class="player-white">⚪ Vian Yang</span>
                                 <span class="vs">vs</span>
                                 <span class="player-black">⚫ Aadit Bhatia</span>
                             </p>
                         </div>
                         <div class="game-meta">
-                            <span class="game-date">📅 June 6, 2024</span>
-                            <span class="game-opening">King's Indian Defense: Fianchetto Variation</span>
+                            <span class="game-date" id="gameDate">📅 January 19, 2025</span>
+                            <span class="game-opening" id="gameOpening">King's Indian Defense: Fianchetto Variation</span>
+                            <span class="game-result" id="gameResult">Result: Draw by repetition</span>
                         </div>
                     </div>
 
@@ -293,8 +301,7 @@
                         </div>
 
                         <div class="game-analysis">
-                            <p><strong>Analysis:</strong> A well-fought game in the King's Indian Defense against a Grandmaster.
-                            This game showcased deep strategic understanding in one of chess's most dynamic openings. Use the controls above to replay the moves and see the position.</p>
+                            <p id="gameAnalysis"><strong>Analysis:</strong> A tactical masterpiece in the King's Indian Defense. Despite being in a tough position, I found creative resources leading to a dramatic draw by repetition. The game featured complex tactical sequences and demonstrated fighting spirit in a difficult position.</p>
                         </div>
                     </div>
                 </article>
@@ -417,22 +424,81 @@
 
     <!-- Chess game initialization -->
     <script>
+        // Game data
+        const games = [
+            {
+                title: "2025 Golden State Open",
+                white: "Vian Yang",
+                black: "Aadit Bhatia",
+                date: "January 19, 2025",
+                opening: "King's Indian Defense: Fianchetto Variation",
+                result: "Draw by repetition",
+                pgn: "1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. Nf3 O-O 5. g3 d6 6. Bg2 Nbd7 7. O-O c6 8. e4 e5 9. h3 Re8 10. Be3 Qa5 11. Qc2 a6 12. Rad1 b5 13. c5 b4 14. Nb1 d5 15. Nxe5 Nxe5 16. dxe5 Nxe4 17. Bxe4 dxe4 18. Qxe4 Bxh3 19. Rfe1 Bxe5 20. Qxc6 Bxb2 21. Bh6 Rec8 22. Qf3 Bf5 23. g4 Bxb1 24. Re7 Bxa2 25. Rdd7 Qa3 26. Be3 Rf8 27. c6 Bg7 28. c7 Qc3 29. Qxa8 b3 30. Re8 b2 31. Rxf8+ Bxf8 32. c8=Q b1=Q+ 33. Kh2 Qe5+ 34. f4 Qg7 35. g5 Be6 36. Qcb7 Qf5 37. Bd4 Qxf4+ 38. Kg1 Qxg5+ 39. Qg2 Qc1+ 40. Qf1 Qg5+ 41. Qfg2 Q7h6 42. Rd8 Qc1+ 43. Qf1 Qhg5+ 44. Kh2 Qh4+ 45. Kg1 Qcg5+",
+                analysis: "A tactical masterpiece in the King's Indian Defense. Despite being in a tough position, I found creative resources leading to a dramatic draw by repetition. The game featured complex tactical sequences and demonstrated fighting spirit in a difficult position."
+            },
+            {
+                title: "Online Chess Tournament",
+                white: "Aadit Bhatia",
+                black: "IM Eric Rosen",
+                date: "October 8, 2024",
+                opening: "Sicilian Defense: Taimanov Variation",
+                result: "1-0 (White wins)",
+                pgn: "1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 Qc7 6. Be2 a6 7. Nxc6 bxc6 8. Qd3 Nf6 9. Qg3 Qxg3 10. hxg3 d5 11. Bg5 Bb4 12. Bxf6 gxf6 13. Bf3 Rb8 14. O-O-O a5 15. Rh6 Ke7 16. Rdh1 Bc5 17. Nd1 a4 18. a3 Bd7 19. Rxh7 Rxh7 20. Rxh7 d4 21. Be2 Rg8 22. g4 Bd6 23. g3 c5 24. f4 Bc6 25. Nf2 Bc7 26. Bc4 Rb8 27. f5 Bxg3 28. Nd3 Bd6 29. Bxe6 Be8 30. Bc4 Rb7 31. g5 fxg5 32. e5 Bb8 33. f6+ Kd8 34. Nxc5 Rc7 35. e6 Rxc5 36. e7+ Kd7 37. Bxf7 Bf4+ 38. Kb1 Bxf7 39. Rxf7 Re5 40. Rf8 Re1+ 41. Ka2 Bd6 42. Rd8+ Kc7 43. e8=Q Rxe8 44. Rxe8 Kd7 45. f7 d3 46. cxd3 Kc6 47. f8=Q Bxf8 48. Rxf8 Kd5 49. Rg8 Kd4 50. Rxg5 Kxd3 51. Rb5 Kc4 52. Rb4+ Kc5 53. Rxa4 Kb5 54. Rb4+ Ka6 55. Kb3 Ka5 56. Kc4 Ka6 57. Kc5 Ka5 58. Kc6 Ka6 1-0",
+                analysis: "A stunning victory against IM Eric Rosen, a renowned chess streamer and International Master (2400+ FIDE). Eric is famous for his entertaining YouTube content and the \"Oh no my queen!\" meme. This game demonstrated precise endgame technique, converting a slight advantage into a winning queen endgame and then a rook endgame."
+            },
+            {
+                title: "Online Chess Tournament",
+                white: "IM Andy Woodward",
+                black: "Aadit Bhatia",
+                date: "December 17, 2024",
+                opening: "London System",
+                result: "0-1 (Black wins)",
+                pgn: "1. d4 Nf6 2. Nf3 d5 3. Bf4 g6 4. Nbd2 Nh5 5. Bg5 f6 6. Bh4 g5 7. Bg3 Bg7 8. e3 Nxg3 9. hxg3 c6 10. Bd3 Bg4 11. c3 Nd7 12. Qc2 h5 13. Bg6+ Kf8 14. Nh2 Be6 15. Nhf3 Bg4 16. Bf5 e6 17. Bxg4 hxg4 18. Rxh8+ Bxh8 19. Qh7 Bg7 20. Nh2 f5 21. O-O-O Qe8 22. Nhf1 Nf6 23. Qh1 c5 24. f3 Qa4 25. a3 b5 26. dxc5 b4 27. axb4 a5 28. Nb1 axb4 29. Rd4 Rb8 30. Nfd2 Nd7 31. fxg4 Nxc5 32. Qf1 Bxd4 33. exd4 bxc3 34. bxc3 Nb3+ 35. Nxb3 Qxb3 36. Nd2 Qxc3+ 37. Kd1 Qxd4 38. Qa6 Rb1+ 39. Ke2 Qxg4+ 40. Kf2 Qd4+ 41. Ke2 Qe5+ 42. Kd3 Rb8 43. Qa7 Qxg3+ 44. Nf3 g4 45. Qc5+ Kf7 46. Qa7+ Kf6 47. Qa1+ Kg6 48. Qa6 Re8 49. Qc6 Re7 50. Qc8 Kf7 51. Qh8 gxf3 52. Qh7+ Ke8 53. Qh3 Qxh3 54. gxh3 e5 0-1",
+                analysis: "An impressive victory against IM Andy Woodward, a strong International Master rated 2500+ FIDE. Andy is a regular competitor in elite tournaments and known for his solid positional play. This game showcased dynamic counterplay in the London System, where I sacrificed material for a devastating attack, ultimately winning in a complex endgame."
+            }
+        ];
+
         // Initialize chess game
-        const game = new Chess();
+        let currentGameIndex = 0;
+        let currentMove = -1;
+        let game = new Chess();
+        let moves = [];
+
         const board = Chessboard('chessboard', {
             position: 'start',
             draggable: false,
             pieceTheme: 'https://chessboardjs.com/img/chesspieces/wikipedia/{piece}.png'
         });
 
-        // Game PGN
-        const pgn = `1. d4 Nf6 2. c4 g6 3. Nf3 Bg7 4. Nc3 O-O 5. g3 d6 6. Bg2 Nbd7 7. O-O e5 8. Qc2 Re8 9. Rd1 c6 10. e4 Qc7 11. h3 a6 12. c5 dxc5 13. dxe5 Nxe5 14. Nxe5 Qxe5 15. Bf4 Qe6 16. Na4 Nd7 17. Rd6 Qe7 18. Rad1`;
+        function loadGame(index) {
+            currentGameIndex = index;
+            currentMove = -1;
 
-        game.load_pgn(pgn);
-        const moves = game.history({ verbose: true });
-        game.reset();
+            // Load PGN
+            game = new Chess();
+            game.load_pgn(games[index].pgn);
+            moves = game.history({ verbose: true });
+            game.reset();
 
-        let currentMove = -1;
+            // Update UI
+            document.getElementById('gameTitle').textContent = games[index].title;
+            document.getElementById('gamePlayers').innerHTML = `
+                <span class="player-white">⚪ ${games[index].white}</span>
+                <span class="vs">vs</span>
+                <span class="player-black">⚫ ${games[index].black}</span>
+            `;
+            document.getElementById('gameDate').textContent = `📅 ${games[index].date}`;
+            document.getElementById('gameOpening').textContent = games[index].opening;
+            document.getElementById('gameResult').textContent = `Result: ${games[index].result}`;
+            document.getElementById('gameAnalysis').innerHTML = `<strong>Analysis:</strong> ${games[index].analysis}`;
+
+            // Update active tab
+            document.querySelectorAll('.game-tab').forEach((tab, i) => {
+                tab.classList.toggle('active', i === index);
+            });
+
+            updateBoard();
+        }
 
         function updateBoard() {
             board.position(game.fen());
@@ -441,6 +507,12 @@
             document.getElementById('moveNumber').textContent = moveText;
         }
 
+        // Game tab switching
+        document.querySelectorAll('.game-tab').forEach((tab, index) => {
+            tab.addEventListener('click', () => loadGame(index));
+        });
+
+        // Board controls
         document.getElementById('startBtn').addEventListener('click', () => {
             game.reset();
             currentMove = -1;
@@ -471,8 +543,8 @@
             updateBoard();
         });
 
-        // Initialize board
-        updateBoard();
+        // Initialize first game
+        loadGame(0);
     </script>
 
     <script src="script.js"></script>
