@@ -2,230 +2,375 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title> Aadit Bhatia </title>
+      <title>Aadit Bhatia | Software Engineer & Chess Master</title>
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1/">
       <link rel="stylesheet" type="text/css" href="default.css">
-      <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
    </head>
    <body>
       <section class="NavSection" id="navbar">
-         <div class="navbar flex" >
+         <div class="navbar flex">
             <div class="nav-container flex">
                <ul>
-                  <li><a href="index.html">Home  </a></li>
-                  <li><a href="#preview">About Me  </a></li>
-                  <li><a href="#exp">Experience  </a></li>
-                  <li><a href="#prj">Projects  </a></li>
-                  <li><a href="#skills">Skills  </a></li>
-                  <li><a href="#contact">Contact Me  </a></li>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#experience">Experience</a></li>
+                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="#chess">Chess</a></li>
+                  <li><a href="#contact">Connect</a></li>
                </ul>
             </div>
          </div>
       </section>
-      <section class="justAboveHome">
-          <div class="up">
-            <h1 class="animate__animated animate__fadeInTopRight" style="text-align: center;">Hi, my name is Aadit. Welcome to my website!!</h1>
 
-          </div>
+      <section class="justAboveHome">
+         <div class="up">
+            <h1 class="animate__animated animate__fadeInTopRight" style="text-align: center;">
+               Software Engineer. Problem Solver. Chess Master.
+            </h1>
+         </div>
       </section>
-      <section class= "Home">
-         
-            <div class="my-wrapper">
-                <div class ="left-column1"> 
-                    <h1 style="text-align:center; color: #eaeaea  ; font-size:80px;" class="animate__animated animate__fadeInTopRight"> Hello my name is Aadit </h1>
+
+      <section class="Home">
+         <div class="my-wrapper">
+            <div class="left-column1">
+               <h1 style="text-align:center; color: #eaeaea; font-size:80px;" class="animate__animated animate__fadeInTopRight">
+                  Aadit Bhatia
+               </h1>
+               <p style="text-align:center; color: #333; font-size:28px; margin-top: -20px;">
+                  Building scalable systems at AWS
+               </p>
+            </div>
+            <div class="right-column1">
+               <div class='frame'>
+                  <canvas id='tree'></canvas>
                </div>
-               <div class="right-column1">
-                  <div class='frame'>
-                      <canvas id='tree'></canvas>
+            </div>
+         </div>
+
+         <div class="intro-wrapper" id="about">
+            <div class="left-column">
+               <img id="myProfile" src="images/chesspic1.jpg" alt="Aadit Bhatia">
+            </div>
+            <div class="right-column">
+               <div id="preview">
+                  <h1>About Me</h1>
+                  <p style="font-size:22px; line-height: 1.6;">
+                     Software Development Engineer at Amazon Web Services, where I build distributed systems serving millions of requests.
+                     I specialize in performance optimization, ML-powered automation, and large-scale infrastructure.
+                  </p>
+                  <p style="font-size:22px; line-height: 1.6;">
+                     Beyond code, I'm a Chess National Master who has represented India internationally.
+                     I bring the same strategic thinking from chess to solving complex engineering challenges.
+                  </p>
+                  <p style="font-size:22px; line-height: 1.6;">
+                     Computer Science graduate from UMass Amherst with experience in AI/ML, distributed systems,
+                     and full-stack development. Passionate about building technology that scales.
+                  </p>
+                  <div style="margin-top: 20px;">
+                     <a style="color:aqua; padding:10px; font-size:18px;" href="Aadit Bhatia Resume.docx">
+                        <i class="fas fa-download"></i> Resume
+                     </a>
+                     <a style="color:aqua; padding:10px; font-size:18px;" href="https://www.linkedin.com/in/aaditbhatia/" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                     </a>
+                     <a style="color:aqua; padding:10px; font-size:18px;" href="https://github.com/AaditBhatia/" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                     </a>
                   </div>
                </div>
-            </div>  
-          </div>
-        
-
-
-
-            <div class="intro-wrapper">
-               <div class="left-column">
-                  <img id="myProfile" src= "images/chesspic1.jpg" >
-               </div>
-               <div class="right-column">
-                   <div id="preview">
-                      <h1>About Me: </h1>
-                      <p style="font-size:25px;">I am pursuing a Computer Science major at UMass Amherst. My interests lie in the field of software engineering and Machine learning. I have done several projects with professors and PhD students at UMass. I enjoy doing hackathons, and my latest creation was an automated chatbot integrated with twilio. My favorite game is Chess and I have represented India in several tournaments.</p>
-                      <p>
-                      <a style="color:aqua; padding:10px" href="Aadit Bhatia Resume.docx">Download Resume</a>
-                      <a style="color:aqua ; padding:10px" href="https://www.linkedin.com/in/aaditbhatia/">Linkedin</a>
-                      <a style="color:aqua" href="https://www.github.com/aaditbhatia/">Github</a>
-                      </p>
-                   </div>
-               </div>
             </div>
-        
-        </section>
-      <section class= "Experience" id="exp">
-        <div class="main-container">
-           <h1 style="text-align: center;"> Experience</h1>
-           <div class="exp-wrapper">
-               <div class="left-column">
-                   <div class="left-umass">
-                       <div id="preview">
-                   <p>
-                    Web-Dev Intern at the <strong>Center for Knowledge Communication</strong>. Working with team on back-end of Mathspring, a game-like mathematics tutor software that uses AI and ML algorithms. I used HTML, CSS, and LaTeX to design comprehensive UI for children of grades 5 and 6. 
-                   </p>
-                   <p>
-                    Worked in the <strong>UMass Amherst Data Systems Group</strong> under assistant professor Marco Serafini and a PhD student. Implemented Machine Learning on Graphs using the Deep Graph Library and PyTorch. Performed hands on programming tasks such as constructing weighted graphs, performing different varieties of walks such as uniform random walk and deep walk using frontiers. Working on implementing parallel radix sort on GPU using cuda and c
-                   </p>
-                   <p>
-                    Gained Research Experience in the <strong>UMass Amherst Cryptography lab</strong>. I Worked under PhD student Nikki Sigurdson where we assisted her in her ongoing projects. Our goal was to test whether functions on huge groups possess the homomorphic property. Understood the fundamentals of group theory, complexity theory as used in cryptographical work,and approximation algorithms.
-                    
-                   </p>
-                       </div>
-                   </div>
-                   <div class="left-Good" id="preview">
-                    <p>
-                        I worked with a team to design versatile templates in HTML, CSS and Bootstrap to create a library of gaming interface designs .Collaborated on ideations to promote website & TV channel using hands-on marketing strategies.                              
-                    </p> 
-                   
-                    </div>
-                    <div class="left-tsg" id="preview">
-                 <p>
-                  During this internship, I cultivated knowledge about relevant business re-engineering, brand development & go-to-market strategies, collaborated with 9 team members to spearhead data collection in order to increase the number of small business sellers on Amazon by 8; received Best Team award for our efficient results. This helped Amazon, as well as local Indian businessmen.
-                    
-                 </p>
-                   </div>
-               </div>
-               <div class="right-column">
-                   <div class="rightUMass">
-                    <img src="images/umass.jpeg" width="350px">
-                   </div>
-                   <div class="right-Good"  >         
-                        
-                        <img src="images/goodtimes2.jpeg" width="300px" height="150px">
-                   </div>
-                   <div class="right-tsg">
-                    <img src="images/TSG.png" width="300px" height="150px">
-                   </div>
-                   
-                
-               </div>
-           </div>
-        </div>
-     </section>
-      <!--section class - div class mainContainer -- classwrapper-- columnswrapper -->
-    
+         </div>
       </section>
-      <section class= "Projects" id="prj">
 
-    
-            <div class="main-container">
-                <h1 style="text-align: center;">Some of my past projects</h1>
-    
-                <div class="post-wrapper">
-    
-                    <div>
-                        <div class="post">
-                            <img class="thumbnail" src="images/connectFour.png">
-                            <div class="post-preview">
-                                <h4 class="post-title">Connect Four</h4>
-                                <p class="post-intro">Made a Connect-four game by integrating front-end web dev tools such as  HTML and CSS, Bootstrap, JavaScript and JQuery. Gained experience using different fonts and animations </p>
-                                
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div>
-                        <div class="post">
-                            <img class="thumbnail" src="images/chatBot.jpeg">
-                            <div class="post-preview">
-                                <h4 class="post-title">Chat Bot</h4>
-                                <p class="post-intro">Created an Automated SMS chat bot with Amazon Lex and Twilio to guide a user into choosing different options using Machine Learning algorithms, and send and recieve text messages </p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div>
-                        <div class="post">
-                            <img class="thumbnail" src="images/recursiveAuto.jpeg">
-                            <div class="post-preview">
-                                <h4 class="post-title">Recursive AutoEncoders</h4>
-                                <p class="post-intro">Worked with the UMass ACM Machine Learning Club where we used Pytorch to enhance Recursive Auto-encoders using ML algorithms. We used Pytorch and implemented Machine Learning algorithms. </p>
-                                
-                            </div>
-                        </div>
-                    </div>
-    
-                </div>
+      <section class="Experience" id="experience">
+         <div class="main-container">
+            <h1 style="text-align: center;">Professional Experience</h1>
+
+            <div class="exp-wrapper">
+               <div class="full-width-exp">
+                  <div class="exp-card">
+                     <div class="exp-header">
+                        <h2><i class="fab fa-aws"></i> Amazon Web Services</h2>
+                        <h3>Software Development Engineer | July 2024 - Present</h3>
+                        <p class="location">Sunnyvale, CA</p>
+                     </div>
+                     <div class="exp-content">
+                        <h4>API Gateway & Load Balancing</h4>
+                        <p>
+                           Working on critical infrastructure that powers millions of applications worldwide. API Gateway acts as the
+                           front door for applications to access backend services, handling request routing, authentication, and traffic
+                           management at massive scale.
+                        </p>
+                        <ul class="achievement-list">
+                           <li>
+                              <strong>ML-Powered Automation:</strong> Built intelligent oncall automation agent using Python and NLP,
+                              reducing operational toil by 20% through automated incident classification and routing
+                           </li>
+                           <li>
+                              <strong>Response Streaming:</strong> Developed full-stack feature for API Gateway serving millions of requests—
+                              designed control plane APIs and orchestrated data flow across distributed compute nodes
+                           </li>
+                           <li>
+                              <strong>Performance Optimization:</strong> Analyzed and optimized distributed caching layer, achieving 50%
+                              latency reduction through systematic profiling of large-scale systems
+                           </li>
+                           <li>
+                              <strong>Technical Leadership:</strong> Conducted code reviews ensuring best practices for performance,
+                              testability, and efficiency across distributed systems architecture
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+
+                  <div class="exp-card">
+                     <div class="exp-header">
+                        <h2><i class="fab fa-aws"></i> Amazon Web Services - Intern</h2>
+                        <h3>Software Development Engineer Intern | June 2023 - September 2023</h3>
+                        <p class="location">Sunnyvale, CA</p>
+                     </div>
+                     <div class="exp-content">
+                        <ul class="achievement-list">
+                           <li>
+                              Built distributed load testing framework for production system handling billions of requests—
+                              developed debugging tools and performance analysis capabilities
+                           </li>
+                           <li>
+                              Integrated automated test suite into CI/CD pipeline with real-time metrics, visualization tools,
+                              and monitoring for continuous performance regression detection
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+
+                  <div class="exp-card">
+                     <div class="exp-header">
+                        <h2><i class="fas fa-database"></i> Oracle</h2>
+                        <h3>Systems Analyst | May 2022 - September 2022</h3>
+                        <p class="location">Denver, CO</p>
+                     </div>
+                     <div class="exp-content">
+                        <ul class="achievement-list">
+                           <li>
+                              Built Python-based data processing pipeline automating integration of 100+ workbooks—
+                              performed data analysis and visualization for large-scale systems optimization
+                           </li>
+                           <li>
+                              Developed workflow automation tools using Python and SQL, reducing manual errors and
+                              improving system efficiency across M&A data operations
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
             </div>
-   
-          
-            
-        
-     </section>
-      <section class= "Skills" id="skills">
-        <div class="main-container">
-           <h1 style="text-align: center;"> Skills </h1>
-           <div class="exp-wrapper">
-               <div class="left-column">
-                   <div class="left-umass">
-                       <div id="preview">
-                        <img src="images/java.jpeg" width="180px">
-                        <img src="images/python.png" width="180px">
-                        <img src="images/htmlcssjs.jpeg" width="180px">
-                        <img src="images/aws.jpeg" width="180px">
 
+            <div class="skills-showcase">
+               <h2 style="text-align: center; margin-top: 40px;">Technical Skills</h2>
+               <div class="skills-grid">
+                  <div class="skill-category">
+                     <h3>Languages & Full-Stack</h3>
+                     <p>Python, JavaScript, TypeScript, C/C++, Java, SQL</p>
+                     <p>React, Node.js, Next.js, Express, HTML/CSS</p>
+                  </div>
+                  <div class="skill-category">
+                     <h3>AI/ML & Infrastructure</h3>
+                     <p>PyTorch, TensorFlow, scikit-learn</p>
+                     <p>AWS (Lambda, API Gateway, EC2, S3, DynamoDB)</p>
+                     <p>Large-scale distributed systems, Performance optimization</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
 
-                       </div>
-                   </div>
-                   <div class="left-Good" id="preview">
-                    <img src="images/twilio.png" width="180px">
-                    <img src="images/nodejs.png" width="180px">
-                    <img src="images/pytorch.png" width="200px">
-                    <img src="images/reactjs.png" width="200px">
-                   
-                    </div>
-                    <div class="left-tsg" id="preview">
-                
-                   </div>
+      <section class="Projects" id="projects">
+         <div class="main-container">
+            <h1 style="text-align: center;">Featured Projects</h1>
+            <p style="text-align: center; font-size: 20px; margin-bottom: 30px;">
+               <a href="https://github.com/AaditBhatia/" target="_blank" style="color: #333;">
+                  <i class="fab fa-github"></i> View all projects on GitHub
+               </a>
+            </p>
+
+            <div class="post-wrapper">
+               <div>
+                  <div class="post">
+                     <div class="post-icon">
+                        <i class="fas fa-robot fa-5x"></i>
+                     </div>
+                     <div class="post-preview">
+                        <h4 class="post-title">AI E-Commerce Generator</h4>
+                        <p class="post-badge">Y Combinator Hackathon</p>
+                        <p class="post-intro">
+                           Built full-stack AI agent generating custom e-commerce websites from natural language prompts.
+                           Developed Python backend integrating LLM API for code generation and repository modification.
+                           Engineered prompt engineering pipeline achieving end-to-end automation in 24 hours.
+                        </p>
+                        <p class="tech-stack">Python • TypeScript • React • Claude API</p>
+                     </div>
+                  </div>
                </div>
-               <div class="right-column">
-                   <div class="rightUMass" id="preview2">
-                    <p>
-                        My skills include Java, Python, Tensorflow, AWS, Node JS, C, Twilio C++, HTML, CSS and JavaScript
-                    </p>
-                    <p>
-                        These are skills I have accumulated through classes, online courses, research projects and Hackathons!!
-                    </p>
-                   </div>
-                  
-                   
-                
+
+               <div>
+                  <div class="post">
+                     <div class="post-icon">
+                        <i class="fas fa-music fa-5x"></i>
+                     </div>
+                     <div class="post-preview">
+                        <h4 class="post-title">Predictive Audio Analytics Engine</h4>
+                        <p class="post-intro">
+                           Built end-to-end ML pipeline processing 160K+ tracks. Developed data analysis tools, feature
+                           engineering pipeline, and visualization for model performance evaluation. Achieved 85% accuracy
+                           through iterative model evaluation and hyperparameter optimization.
+                        </p>
+                        <p class="tech-stack">Python • PyTorch • scikit-learn</p>
+                     </div>
+                  </div>
                </div>
-           </div>
-        </div>
-     </section>
-      <section class= "Contact">
-         <div class="main-container" id="contact">
-            <h1 style="text-align: center;">Get in touch</h1>
-           
+
+               <div>
+                  <div class="post">
+                     <div class="post-icon">
+                        <i class="fas fa-server fa-5x"></i>
+                     </div>
+                     <div class="post-preview">
+                        <h4 class="post-title">Distributed Training Optimizer</h4>
+                        <p class="post-intro">
+                           Built distributed ML training system across 8 GPUs, reducing training time by 35%.
+                           Profiled large-scale system performance using visualization tools—optimized memory patterns
+                           and implemented mixed-precision training enabling 2.5x larger batch sizes.
+                        </p>
+                        <p class="tech-stack">Python • PyTorch • CUDA</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="Chess" id="chess">
+         <div class="main-container">
+            <h1 style="text-align: center;">
+               <i class="fas fa-chess"></i> Chess Achievements
+            </h1>
+
+            <div class="chess-wrapper">
+               <div class="chess-intro">
+                  <div class="chess-title-section">
+                     <h2>FIDE National Master</h2>
+                     <p style="font-size: 24px; color: #666; margin-top: 10px;">
+                        Represented India in International Tournaments
+                     </p>
+                  </div>
+                  <img src="images/chesspic1.jpg" alt="Chess" class="chess-image">
+               </div>
+
+               <div class="chess-stats">
+                  <div class="chess-card">
+                     <div class="chess-icon">
+                        <i class="fas fa-trophy fa-3x"></i>
+                     </div>
+                     <h3>FIDE Rating</h3>
+                     <p>Official International Rating</p>
+                     <a href="https://ratings.fide.com/profile/25088955" target="_blank" class="chess-link">
+                        View FIDE Profile →
+                     </a>
+                  </div>
+
+                  <div class="chess-card">
+                     <div class="chess-icon">
+                        <i class="fas fa-globe fa-3x"></i>
+                     </div>
+                     <h3>Chess.com</h3>
+                     <p>Online Chess Profile</p>
+                     <a href="https://www.chess.com/member/real_taiatai" target="_blank" class="chess-link">
+                        View Chess.com Profile →
+                     </a>
+                  </div>
+
+                  <div class="chess-card">
+                     <div class="chess-icon">
+                        <i class="fas fa-database fa-3x"></i>
+                     </div>
+                     <h3>ChessBase</h3>
+                     <p>Game Database & Analysis</p>
+                     <a href="https://players.chessbase.com/en/player/Aadit_Bhatia/336221" target="_blank" class="chess-link">
+                        View ChessBase Profile →
+                     </a>
+                  </div>
+               </div>
+
+               <div class="chess-description">
+                  <p style="font-size: 20px; line-height: 1.8; text-align: center; max-width: 900px; margin: 0 auto;">
+                     Chess has taught me strategic thinking, pattern recognition, and the ability to evaluate complex positions
+                     under pressure. These skills translate directly to software engineering—debugging distributed systems,
+                     optimizing performance bottlenecks, and architecting scalable solutions all require the same analytical
+                     mindset that chess develops.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="Contact" id="contact">
+         <div class="main-container">
+            <h1 style="text-align: center;">Let's Connect</h1>
+            <p style="text-align: center; font-size: 22px; margin-bottom: 30px; color: #333;">
+               Interested in collaborating, discussing technology, or perhaps a game of chess? Reach out!
+            </p>
+
+            <div class="contact-options">
+               <div class="contact-card">
+                  <i class="fas fa-envelope fa-3x"></i>
+                  <h3>Email</h3>
+                  <p>Send me a message below</p>
+               </div>
+               <div class="contact-card">
+                  <i class="fab fa-linkedin fa-3x"></i>
+                  <h3>LinkedIn</h3>
+                  <a href="https://www.linkedin.com/in/aaditbhatia/" target="_blank">Connect with me</a>
+               </div>
+               <div class="contact-card">
+                  <i class="fab fa-github fa-3x"></i>
+                  <h3>GitHub</h3>
+                  <a href="https://github.com/AaditBhatia/" target="_blank">Check out my code</a>
+               </div>
+            </div>
+
             <form id="contact-form">
-                <label >Name</label>
-                <input class="input-field" type="text" name="name">
-                <label >Subject</label>
-                <input class="input-field" type="text" name="subject">
-                <label >Email</label>
-                <input class="input-field" type="text" name="email">
-                <label>Message</label>
-                <textarea class="input-field" type="text" name="message"></textarea>
+               <label>Name</label>
+               <input class="input-field" type="text" name="name" required>
 
-                <input id="submit-btn" type="submit" value="send">
+               <label>Email</label>
+               <input class="input-field" type="email" name="email" required>
+
+               <label>Subject</label>
+               <input class="input-field" type="text" name="subject" required>
+
+               <label>Message</label>
+               <textarea class="input-field" name="message" rows="5" required></textarea>
+
+               <input id="submit-btn" type="submit" value="Send Message">
             </form>
          </div>
       </section>
+
+      <footer style="background-color: black; color: white; text-align: center; padding: 30px; font-size: 16px;">
+         <p>© 2024 Aadit Bhatia | Software Engineer & Chess Master</p>
+         <p style="margin-top: 10px;">
+            <a href="https://www.linkedin.com/in/aaditbhatia/" target="_blank" style="color: white; margin: 0 10px;">
+               <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/AaditBhatia/" target="_blank" style="color: white; margin: 0 10px;">
+               <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.chess.com/member/real_taiatai" target="_blank" style="color: white; margin: 0 10px;">
+               <i class="fas fa-chess"></i>
+            </a>
+         </p>
+      </footer>
    </body>
    <script src="logic.js"></script>
 </html>
